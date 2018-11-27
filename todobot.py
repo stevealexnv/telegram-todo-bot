@@ -45,7 +45,7 @@ def handle_updates(updates):
             chat = update["message"]["chat"]["id"]
             items = db.get_items(chat)
             if text == "/start":
-                send_message("Welcome! I'm TuDu, your personal To Do list bot. Send any text to me and I'll store it as an item. Send the text again to delete it from the list.", chat)
+                send_message("Welcome! I'm TuTuDu, your personal To Do list bot. Send any text to me and I'll store it as an item. Send the text again to delete it from the list.", chat)
             elif text in items:
                 db.delete_item(text, chat)
                 items = db.get_items(chat)
